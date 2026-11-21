@@ -1,23 +1,29 @@
 #include <iostream>
- 
-int main() {
+
+int main (){
     int a;
     int b;
+    int slo;
+    int vis;
+    int ymn;
+    int del;
+    int ost;
 
-    std::cout << "введите число:";
-    std::cin >> a;
-    std::cout << "введите число:";
-    std::cin >> b;
-    int sym = a + b;
-    int raz = a - b ;
-    int pro = a * b ;
-    double del = a / b;
-    int ost = a % b;
-
-    std::cout << "сложение:" << sym << '\n';
-    std::cout << "вычитание:" << raz << '\n';
-    std::cout << "умножение:" << pro << '\n';
-    std::cout << "деление:" << del << '\n';
-    std::cout << "остаток:" << ost << '\n';
-
+    std::cout << "введите 2 числа через пробел" << '\n';
+    std::cin >> a >> b;
+    slo = a + b;
+    std::cout << "сложение:" << slo << '\n';
+    vis = a - b;
+    std::cout << "вычитание:" << vis << '\n';
+    ymn = a * b;
+    std::cout << "умножение:" << ymn << '\n';
+    if (b == 0){
+        std::cout << "делить на ноль нельзя";
+    } 
+    else {
+        double del = (double)a / b;
+        std::cout << "деление:" << del << '\n';
+        ost = a % b;
+        std::cout << "остаток:" << ost << '\n';
+    }
 }
