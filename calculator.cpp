@@ -1,14 +1,15 @@
 #include <iostream>
 
 int main (){
+    bool asser = true;
+    int s;
     int a;
     int b;
     int slo;
     int vis;
     int ymn;
-    int del;
     int ost;
-
+do {
     std::cout << "введите 2 числа через пробел" << '\n';
     std::cin >> a >> b;
     slo = a + b;
@@ -18,7 +19,7 @@ int main (){
     ymn = a * b;
     std::cout << "умножение:" << ymn << '\n';
     if (b == 0){
-        std::cout << "делить на ноль нельзя";
+        std::cout << "делить на ноль нельзя!" << '\n';
     } 
     else {
         double del = (double)a / b;
@@ -26,4 +27,14 @@ int main (){
         ost = a % b;
         std::cout << "остаток:" << ost << '\n';
     }
+std::cout << "продолжить?"<< '\n' << "1-да" << "0- нет" << '\n';
+std::cin >> s;
+if(s == 0){
+    asser = false;
+}
+}
+while (asser);
+
+return 0;
+
 }
